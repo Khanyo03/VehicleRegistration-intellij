@@ -1,5 +1,7 @@
 package Com.Cars;
 
+import java.time.LocalDate;
+
 public class Cars {
     private String make;
     private String model;
@@ -7,6 +9,7 @@ public class Cars {
     private String vin;
     private int year;
     private int mileage;
+    private LocalDate entryDate;
 
     public String getMake() { return make; }
     public void setMake(String make) { this.make = make; }
@@ -25,5 +28,8 @@ public class Cars {
 
     public int getMileage() { return mileage; }
     public void setMileage(int mileage) { this.mileage = mileage; }
+
+    public LocalDate getEntryDate() { return entryDate; }
+    public void setEntryDate(LocalDate entryDate) { this.entryDate = entryDate; }
 }
 

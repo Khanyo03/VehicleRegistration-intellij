@@ -1,8 +1,10 @@
 package Com.Cars;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -30,7 +32,7 @@ public class Main {
                     System.out.print("Enter Model: ");
                     String model = input.nextLine();
 
-                    System.out.print("Enter Plate Number (e.g. AA11BB GP): ");
+                    System.out.print("Enter Plate Number (e.g. AA 11 BB GP): ");
                     String plateNum = input.nextLine();
 
                     System.out.print("Enter VIN Number (17 characters): ");
@@ -54,6 +56,7 @@ public class Main {
                     carObj.setVin(vin.toUpperCase());
                     carObj.setYear(year);
                     carObj.setMileage(mileage);
+                    carObj.setEntryDate(LocalDate.now());
 
                     cars.add(carObj);
                     System.out.println("Vehicle registered successfully!");
@@ -72,6 +75,7 @@ public class Main {
                                             "\nVIN: " + car.getVin() +
                                             "\nYEAR: " + car.getYear() +
                                             "\nMILEAGE: " + car.getMileage() +
+                                            "\nDATE: " + car.getEntryDate() +
                                             "\n--------------------------");
                         }
                     }
